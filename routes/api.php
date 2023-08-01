@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\ExercicioCinco;
 use App\Http\Controllers\ExercicioDois;
 use App\Http\Controllers\ExercicioQuatro;
+use App\Http\Controllers\ExercicioSeis;
+use App\Http\Controllers\ExercicioSete;
 use App\Http\Controllers\ExercicioTres;
 use App\Http\Controllers\ExercicioUm;
 use Illuminate\Http\Request;
@@ -31,7 +34,10 @@ Route::post('exercicio/quatro',
 [ExercicioQuatro::class, 'verificarNumero']);
 
 Route::post('exercicio/cinco',
-[ExercicioCincoController::class, 'verificar']);
+[ExercicioCinco::class, 'verificar']);
 
 Route::post('exercicio/seis', 
-[ExercicioSeisController::class, 'idade']);
+[ExercicioSeis::class, 'idade']);
+
+Route::get('exercicio/sete', 
+[ExercicioSete::class, 'exibirNumeros']);
