@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ExercicioDois;
+use App\Http\Controllers\ExercicioTres;
 use App\Http\Controllers\ExercicioUm;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,4 +22,7 @@ Route::post('exercicio/um',
 
 Route::post('exercicio/dois', 
 [ExercicioDois::class, 'retornarMaior']);
+
+Route::post('exercicio/tres', 
+[ExercicioTres::class, 'media']);
 
